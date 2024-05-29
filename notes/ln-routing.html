@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://avatars.githubusercontent.com/u/63845509?v=4" rel="shortcut icon" type="image/x-icon" />
+    <link href="../style/assets/favicon.ico" rel="apple-touch-icon" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Converting an Old Laptop into a Routing Node</title>
+
+    <link rel="stylesheet" href="../style/src/style.css" />
+</head>
+
+</html>
+
+<div class="container">
+    <div id="nav" data-animate style="--stagger: 1;">
+        <div id="tab-highlight"></div>
+        <a class="nav-item" href="../">about</a>
+        <a class="nav-item" href="/notes/">notes</a>
+        <a class="nav-item" href="/photos/">photos</a>
+    </div>
+
+    <div class="row content">
+        <section class="post" data-animate style="--stagger: 2;">
+            <div class="post-content">
+                <img style="width: 100%; height: auto;" src="https://media.defense.gov/2019/Jan/11/2002078648/-1/-1/0/190111-F-XX999-012.JPG" />
+                <span class="imgcaption"><i>A RaspiBlitz</i> from internet</span>
+                <h1>Converting an Old Laptop into a Routing Node</h1>
+                <h2 style="font-size: 1em; margin-block-start: 0em; color: #a0a0a0;">april 24, 2024</h2>
+                <p></p>
+                <ol>
+<p>If it only takes simple, cheap hardware with the required space and a stable internet connection to run a Bitcoin and Lightning full-node, we can convert consumer hardware, such as an old laptop, into a <a href="https://lightning.engineering/posts/2018-05-23-routing/">Lightning routing node</a>.</p>
+<p>There are certain <a href="https://docs.lightning.engineering/lightning-network-tools/lnd/optimal-configuration-of-a-routing-node#docs-internal-guid-aaf6ad01-7fff-66f0-2a47-ffe8f9f7f8a5">requirements</a> your laptop needs to meet. It should have a decent amount of RAM (at least 4GB) and a relatively modern processor (64-bit architecture). Ensure there&#39;s storage space to install and run the software for routing transactions. While ECC memory support and redundancy features like RAID arrays are desirable (in case of memory corruption), they are not needed to get started.</p>
+<p>Next, ensure you have a reliable internet connection. To ensure effective payment routing, routing nodes must have a constant and fast internet connection. For stability, it is highly preferred to use an Ethernet connection (old MacBooks may require adapters).</p>
+<p>In terms of technical expertise, operating a routing node requires some level of technical knowledge. Familiarity with CLI commands and understanding of networking concepts will be beneficial. You&#39;ll also need to be comfortable installing and configuring software on your laptop.</p>
+<p>Below are the steps needed to convert your old laptop into a routing node:</p>
+<ol>
+<li><p><em><strong>Choose Lightning Network Implementation</strong></em>: Research and select a Lightning Network implementation that suits your preferences and needs. Popular options include <a href="https://github.com/lightningnetwork/lnd">LND</a>, <a href="https://github.com/ElementsProject/lightning">Core Lightning</a>, and <a href="https://github.com/ACINQ/eclair">eclair</a>. These implementations fully or partially conform to the <a href="https://github.com/lightning/bolts">BOLTs</a>, which makes them interoperable (different implementations can interact with each other).</p>
+</li>
+<li><p><em><strong>Installation</strong></em>: Follow the installation instructions provided by your chosen LN implementation. This involves downloading the software package, installing dependencies, and configuring the software to run on your laptop. View <a href="https://docs.lightning.engineering/lightning-network-tools/lnd/run-lnd">documentation</a> to guide you through the installation and configuration process.</p>
+</li>
+<li><p><em><strong>Set Up a Lightning Wallet</strong></em>: Choose a Lightning wallet, like <a href="https://bluewallet.io/lndhub/">BlueWallet</a>, that is compatible with your chosen LN implementation and preferences. Follow the instructions provided by the wallet provider to set up your wallet and connect it to your routing node. This will allow you to send and receive Lightning payments and manage your funds within the network.</p>
+</li>
+<li><p><em><strong>Open Channels</strong></em>: Prior to <a href="https://docs.lightning.engineering/lightning-network-tools/lnd/first-steps-with-lnd#docs-internal-guid-cc7ef0e6-7fff-09d1-5425-d232ccb1735f">opening channels</a> with other nodes on the network to start routing payments, <a href="https://docs.lightning.engineering/lightning-network-tools/lnd/first-steps-with-lnd#docs-internal-guid-8b3e92ed-7fff-7a3c-bb3f-c59cbd3f45db">allocate funds</a> to your node. Determine which nodes you want to connect to based on factors like <a href="https://docs.lightning.engineering/the-lightning-network/the-gossip-network/identify-good-peers">connectivity, fees, and reputation</a>. Tools such as <a href="https://1ml.com/">1ML</a> can also help.</p>
+</li>
+<li><p><em><strong>Monitor and Maintain</strong></em>: Regularly <a href="https://terminal.lightning.engineering/">monitor</a> your routing node for performance issues as well as connectivity problems. Though rare, be mindful of potential security risks by keeping up to date with the <a href="https://github.com/lightningnetwork/lnd/releases">latest patches</a> and security fixes.</p>
+</li>
+</ol>
+<p>Opening and maintaining channels with adequate liquidity is key to becoming a successful routing node. By following these steps and <a href="https://docs.lightning.engineering/the-lightning-network/multihop-payments/what-makes-a-good-routing-node">maintaining your routing node</a>, even an old laptop can actively contribute to the Lightning Network while making potential earnings from routing fees.</p>
+
+
+            </div>
+        </section>
+    </div>
+</div>
